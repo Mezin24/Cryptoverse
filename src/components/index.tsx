@@ -1,2 +1,6 @@
 export { Navbar } from './Navbar';
-export { Footer } from './Footer';
+export { Homepage } from './Homepage';
+export { Exchanges } from './Exchanges';
+export { Cryptocurrencies } from './Cryptocurrencies';
+export { CryptoDetails } from './CryptoDetails';
+export { News } from './News';
