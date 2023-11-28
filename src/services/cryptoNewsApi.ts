@@ -2,18 +2,10 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { NewsData } from '../types';
 
 const crytoNewsApiHeaders = {
-  'X-RapidAPI-Key': '800d1c77edmsh142906e4c64c9efp1dacc1jsn17c97fdb6965',
-  'X-RapidAPI-Host': 'news-api14.p.rapidapi.com',
+  'X-RapidAPI-Key': import.meta.env.VITE_APP_RAPIDAPI_KEY,
+  'X-RapidAPI-Host': import.meta.env.VITE_APP_NEWS_RAPIDAPI_HOST,
 };
-const baseUrl = 'https://news-api14.p.rapidapi.com';
-
-// const cryptoParams = {
-//   referenceCurrencyUuid: 'yhjMzLPhuIDl',
-//   limit: '50',
-//   offset: '0',
-//   orderBy: '24hVolume',
-//   orderDirection: 'desc',
-// };
+const baseUrl = import.meta.env.VITE_APP_NEWS_API_URL;
 
 const createRequest = (url: string) => ({ url, headers: crytoNewsApiHeaders });
 

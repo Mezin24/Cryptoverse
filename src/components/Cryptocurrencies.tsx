@@ -3,6 +3,7 @@ import { useGetCryptosQuery } from '../services/cryptoApi';
 import { Card, Col, Input, Row } from 'antd';
 import { Link } from 'react-router-dom';
 import millify from 'millify';
+import { Loader } from '.';
 
 interface CryptocurrenciesProps {
   simplified?: boolean;
@@ -23,7 +24,7 @@ export const Cryptocurrencies = ({ simplified }: CryptocurrenciesProps) => {
   }, [cryptoList, searchTerm]);
 
   if (isFetching) {
-    return 'Loading...';
+    return <Loader />;
   }
 
   return (
