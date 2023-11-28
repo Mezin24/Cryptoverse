@@ -66,7 +66,7 @@ export const News = ({ simplified }: NewsProps) => {
               </p>
               <div className='provider-container'>
                 <Avatar src={demoImage} alt='news' />
-                <Text>{moment(news.published_date).format('LL')}</Text>
+                {/* <Text>{moment(news.published_date).format('LL')}</Text> */}
               </div>
             </a>
           </Card>
