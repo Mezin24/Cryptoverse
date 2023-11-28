@@ -1,14 +1,12 @@
 import {
-  MenuOutlined,
+  FundOutlined,
   HomeOutlined,
   MoneyCollectOutlined,
-  BuildOutlined,
-  FundOutlined,
 } from '@ant-design/icons';
 import { Avatar, Menu, MenuProps, Typography } from 'antd';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Icon from '../assets/images/cryptocurrency.png';
-import React from 'react';
 
 const menuItems: MenuProps['items'] = [
   { icon: HomeOutlined, label: 'Home', path: '/' },

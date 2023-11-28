@@ -29,3 +29,19 @@ export interface ExchangesData {
     coins: Coin[];
   };
 }
+
+export interface News {
+  title: string;
+  url: string;
+  published_date: string;
+  publisher: {
+    name: string;
+    url: string;
+  };
+}
+
+export interface NewsData {
+  status: string;
+  totalResults: number;
+  articles: News[];
+}
