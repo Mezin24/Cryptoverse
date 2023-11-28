@@ -1,13 +1,13 @@
 import { Avatar, Card, Col, Row, Select, Typography } from 'antd';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
-import moment from 'moment';
+// import moment from 'moment';
 import { useState } from 'react';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
 interface NewsProps {
   simplified?: boolean;
 }
-const { Title, Text } = Typography;
+const { Title } = Typography;
 const demoImage =
   'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
