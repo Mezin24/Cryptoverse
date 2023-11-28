@@ -1,14 +1,13 @@
 import { Avatar, Card, Col, Row, Select, Typography } from 'antd';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
-// import moment from 'moment';
 import { useState } from 'react';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 
-interface NewsProps {
+export interface NewsProps {
   simplified?: boolean;
 }
-const { Title } = Typography;
-const demoImage =
+export const { Title } = Typography;
+export const demoImage =
   'https://www.bing.com/th?id=OVFT.mpzuVZnv8dwIMRfQGPbOPC&pid=News';
 
 export const News = ({ simplified }: NewsProps) => {
@@ -34,9 +33,6 @@ export const News = ({ simplified }: NewsProps) => {
             placeholder='Select a Crypto'
             optionFilterProp='children'
             onChange={(value) => setNewsCategory(value)}
-            // filterOption={(input, option) =>
-            //   option?.children?.toLowerCase().indexOf(input.toLowerCase())
-            // }
           >
             <Select.Option value='Cryptocurrency'>Cryptocurrency</Select.Option>
             {data?.data.coins.map((coin) => (
@@ -66,7 +62,6 @@ export const News = ({ simplified }: NewsProps) => {
               </p>
               <div className='provider-container'>
                 <Avatar src={demoImage} alt='news' />
-                {/* <Text>{moment(news.published_date).format('LL')}</Text> */}
               </div>
             </a>
           </Card>
